@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa6';
 
+import Link from 'next/link';
+
 const images = [
     '/pt/1.jpg',
     '/pt/2.jpg',
@@ -30,14 +32,37 @@ export default function Events() {
         return () => clearTimeout(timer);
     }, [currentIndex]);
 
+
+
     return (
         <>
             <section id="events" className='bg-[#232E26] font-poiret'>
-            <div className="text-center mb-8">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#D9EFDE] mb-4 font-font3">Our Events </h1>
-        <p className="text-sm sm:text-lg md:text-xl text-[#D9EFDE] max-w-2xl mx-auto font-bold text-balance">Plantation Drive Conducted by Arham on 25-Oct-2024
-        </p>
-      </div>
+               <div className="w-full bg-cover">
+                <div className="mb-8 max-w-7xl mx-auto px-4">
+                    <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl 
+                    font-bold text-[#D9EFDE] mb-4 font-font3">
+                    Our Events
+                    </h1>
+                    <div className="relative flex items-center">
+                    <p className="mx-auto text-sm sm:text-lg md:text-xl 
+                        text-[#D9EFDE] font-bold text-center">
+                        A glimpse into moments at Arham Club
+                    </p>
+                    <Link
+                        href="/past"
+                        className="absolute right-0 cursor-pointer font-font3 
+                        text-[#06402B] bg-white text-sm sm:text-base md:text-lg font-bold
+                        border-2 border-white rounded-lg px-6 py-2
+                        hover:bg-transparent hover:text-[#D9EFDE]
+                        transition-colors whitespace-nowrap"
+                    >
+                        Our Past Events
+                    </Link>
+                    </div>
+
+                </div>
+            </div>
+
 
                 <div className="flex justify-center">
                     <div className="relative h-full w-[90%] md:w-[75%] overflow-hidden rounded-xl md:rounded-3xl border-white border-2">

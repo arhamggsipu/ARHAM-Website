@@ -34,7 +34,7 @@ export default function Footer(){
                 </a>
                 <a 
                 className="bg-green-400 hover:bg-green-600 cursor-pointer p-2 md:p-3 rounded-full text-black text-xl md:text-4xl"
-                href="https://www.instagram.com/arham_ggsipu/profilecard/?igsh=aTI4Y3N6OW55aTls"
+                href="https://www.linkedin.com/in/arham-ggsipuedc/"
                 target="_blank"
                 > <FaLinkedin/>
                 </a>
