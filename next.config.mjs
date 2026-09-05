@@ -6,9 +6,26 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'assets.aceternity.com',
         port: '',
-        pathname: '/**', // Matches all paths on this hostname
+        pathname: '/**',
       },
     ],
+  },
+  webpack(config, { isServer }) {
+    config.module.rules.push({
+      test: /\.(mp4|webm|ogg|swf|ogv)$/i,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            publicPath: '/_next/static/videos/',
+            outputPath: `${isServer ? '../' : ''}static/videos/`,
+            name: '[name].[hash].[ext]',
+          },
+        },
+      ],
+    });
+
+    return config;
   },
 };
 
