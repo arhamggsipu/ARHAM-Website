@@ -29,4 +29,3 @@ const DesignTeam = [
 ];
 
 export default DesignTeam;
-  

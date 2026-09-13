@@ -108,8 +108,6 @@ const EventData = [
     location: "USAR Campus",
     category: "Club Introduction",
     images: [
-      '/eventAssets/Orientation1.jpg',
-      '/eventAssets/Orientation2.jpg',
       '/eventAssets/Orientation3.jpg',
       '/eventAssets/Orientation4.jpg',
       '/eventAssets/Orientation5.jpg',
